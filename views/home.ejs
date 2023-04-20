@@ -1,0 +1,22 @@
+<%- include("partials/header") -%>
+
+<div>
+
+    <p><%= homeStartingContent %></p>
+    <a href="https://github.com/prasannabiswas">GTIHUB</a>
+    <a href="">Code for this web-app</a>
+
+    <% let length = 50; %>
+    
+    <% posts.forEach(function(post){ %>
+        <h2> <%= post.title; %></h2> 
+        <p>
+            <%= post.post.substring(0,length) + " ..."; %>
+            <a href="/posts/<%=post.title%>"> Read more </a>
+        </p> 
+    <% }); %>
+
+
+</div>
+ 
+<%- include("partials/footer") -%>
